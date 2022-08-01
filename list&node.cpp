@@ -1,7 +1,8 @@
 
 
 
-// not working
+
+// some notes
 
 
 #include <iostream>
@@ -18,15 +19,21 @@ using namespace std;
 
 // list.cc
 // ======================================================================================
-struct List::Node { 
-	// since it is already an instance of a private class, 
-  // we make everything inside Node public so List can have access to it
+// struct List::Node { 
+// 	// since it is already an instance of a private class, 
+//   // we make everything inside Node public so List can have access to it
+//   int data;
+//   Node *next;
+//   Node(int d, Node* n) : data{d}, next{n}{} 
+//   ~Node() { delete next; };
+// };
+
+struct Node {
   int data;
   Node *next;
-  Node(int d, Node* n) : data{d}, next{n}{} 
-  ~Node() { delete next; };
+  Node(int, Node*);
+  ~Node() { delete next; }
 };
-
 
 
 
